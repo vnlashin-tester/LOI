@@ -1,0 +1,213 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Main styles */
+main {
+    padding: 2em;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.gallery-item {
+    background-color: #f4f4f4;
+    padding: 1em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact form styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 1440px) {
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .content p {
+        font-size: 1.1em;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 2em);
+    }
+}
+
+@media (max-width: 1024px) {
+    header, footer {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(100% - 2em);
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 1.6em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(100% - 1em);
+    }
+}
+
+@media (max-width: 320px) {
+    header .logo {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(100% - 0.5em);
+    }
+}
+
+/* Grid and Flexbox styles */
+header, footer, .content, .gallery, .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
